@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: dockerfiles/node.dockerfile
+    extra_hosts:
+      - '11ty-tailwind.test:127.0.0.1'
+    ports:
+      - 3000:8080
+    volumes:
+      - ./src:/app
+      - /app/node_modules
