@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A starter template for using Eleventy, Tailwind CSS and Alpine.js",
     "scripts": {
-        "start": "concurrently \"npm run dev:*\"",
+        "start": "concurrently 'npm run dev:*'",
         "build": "npx @11ty/eleventy && tailwindcss -i ./tailwind.css -o ./_site/css/styles.css",
         "dev:css": "tailwindcss -i ./tailwind.css -o ./_site/css/styles.css --watch",
         "dev:11ty": "eleventy --serve --quiet"
