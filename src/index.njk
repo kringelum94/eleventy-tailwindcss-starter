@@ -2,6 +2,36 @@
 layout: 'layouts/base.njk'
 ---
 
-<h1 class="text-4xl font-bold text-red-800">Hello world!</h1>
-
-<img src="/assets/11ty-logo.png" alt="logo" />
+<div
+    x-data="{gradientToSky: true}"
+    class="w-full flex flex-col items-center justify-center p-32 bg-gradient-to-r from-gray-100"
+    :class="gradientToSky ? 'to-sky-200' : 'to-pink-200'">
+    <h1 class="text-4xl font-bold text-gray-400 mb-12">
+        <a
+            href="https://www.11ty.dev/"
+            target="_blank"
+            class="transition text-[#333333] pb-1 border-b-4 border-transparent hover:border-[#333333]">
+            Eleventy</a>
+        |
+        <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            class="transition text-[#38BDF8] pb-1 border-b-4 border-transparent hover:border-[#38BDF8]">Tailwind CSS</a>
+        |
+        <a
+            href="https://alpinejs.dev/"
+            target="_blank"
+            class="transition text-[#2D3441] pb-1 border-b-4 border-transparent hover:border-[#2D3441]">
+            Alpine.js</a>
+    </h1>
+    <button
+        class="transition bg-sky-500 rounded-full text-white px-4 py-2 border-2 border-transparent hover:border-sky-500
+            hover:bg-gray-100 hover:text-sky-600"
+        @click="gradientToSky = !gradientToSky">Toggle gradient</button>
+    <div class="flex justify-center text-center mt-12">
+        <p class="max-w-prose text-gray-600">
+            Hope you enjoy using my Eleventy, Tailwind CSS, Alpine.js and Docker starter template. It has made my life alot easier,
+            hopefully the same will be true for you. Happy coding! 🤖
+        </p>
+    </div>
+</div>
